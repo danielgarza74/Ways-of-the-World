@@ -76,31 +76,34 @@
         </article>
     </main>
 
-    <!-- Consolidated Bottom Bar -->
+    <!-- Consolidated Bottom Bar: Redesigned for absolute wrapping with no truncation -->
     <div id="bottom-bar" class="flex-shrink-0 bg-slate-900 border-t border-yellow-600 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-20 relative">
+        
         <!-- Progress Bar -->
         <div class="absolute top-0 left-0 w-full h-1 bg-slate-800">
             <div id="progress-bar" class="h-full bg-yellow-500 transition-all duration-300 ease-out" style="width: 0%;"></div>
         </div>
         
-        <div class="flex items-center justify-between px-4 py-3 h-16">
+        <!-- Container allowing flexible height -->
+        <div class="flex items-center justify-between px-4 py-4 min-h-[5rem] h-auto gap-4">
+            
             <!-- Left Section: Title -->
-            <div class="flex-1 font-semibold text-slate-300 truncate pr-4 text-sm md:text-base">
+            <div class="hidden lg:block w-1/4 font-semibold text-slate-300 text-sm md:text-base">
                 Lecture 2: First Civilizations
             </div>
 
-            <!-- Center Section: Cue Question -->
-            <div id="eq-container" class="flex-[2] flex items-center justify-center gap-3 opacity-0 invisible px-4">
-                <span class="bg-yellow-600 text-yellow-50 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider whitespace-nowrap">
+            <!-- Center Section: Cue Question (Fully Wrappable) -->
+            <div id="eq-container" class="flex-1 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-3 opacity-0 invisible">
+                <span class="bg-yellow-600 text-yellow-50 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider flex-shrink-0">
                     Cue Question
                 </span>
-                <p id="eq-text" class="text-sm text-yellow-100 italic truncate max-w-xl text-center">
-                    <!-- Dynamic text will be injected here -->
+                <p id="eq-text" class="text-sm md:text-base text-yellow-100 italic text-left leading-relaxed break-words whitespace-normal max-w-3xl">
+                    <!-- Dynamic text will be injected here and forced to wrap entirely -->
                 </p>
             </div>
 
             <!-- Right Section: Controls -->
-            <div class="flex-1 flex items-center justify-end gap-3">
+            <div class="flex items-center justify-end gap-3 w-auto lg:w-1/4 flex-shrink-0">
                 <div id="slide-counter" class="text-slate-400 font-mono text-sm tracking-widest min-w-[60px] text-right">
                     01 / 14
                 </div>
@@ -126,6 +129,7 @@
                     </svg>
                 </button>
             </div>
+            
         </div>
     </div>
 

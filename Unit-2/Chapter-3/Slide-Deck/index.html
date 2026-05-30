@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 3: State and Empire - Presentation Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            overflow: hidden; /* Hide the main scrollbar for a clean presentation view */
+        }
+        #eq-container {
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body id="presentation-app" class="bg-slate-950 text-white font-sans antialiased h-screen flex flex-col">
+
+    <!-- Main Slide Container -->
+    <main id="slides-container" class="flex-1 flex overflow-hidden relative bg-slate-950 z-0">
+        
+        <!-- Slide 1 -->
+        <article class="slide w-full h-full p-4 md:p-8 flex items-center justify-center">
+            <img src="Slide_Page_01.png" alt="Slide 01" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_01.png+Missing'">
+        </article>
+        <!-- Slide 2 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_02.png" alt="Slide 02" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_02.png+Missing'">
+        </article>
+        <!-- Slide 3 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_03.png" alt="Slide 03" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_03.png+Missing'">
+        </article>
+        <!-- Slide 4 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_04.png" alt="Slide 04" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_04.png+Missing'">
+        </article>
+        <!-- Slide 5 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_05.png" alt="Slide 05" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_05.png+Missing'">
+        </article>
+
+        <!-- Slide 6 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_06.png" alt="Slide 06" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_06.png+Missing'">
+        </article>
+        <!-- Slide 7 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_07.png" alt="Slide 07" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_07.png+Missing'">
+        </article>
+        <!-- Slide 8 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_08.png" alt="Slide 08" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_08.png+Missing'">
+        </article>
+        <!-- Slide 9 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_09.png" alt="Slide 09" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_09.png+Missing'">
+        </article>
+        <!-- Slide 10 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_10.png" alt="Slide 10" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_10.png+Missing'">
+        </article>
+
+        <!-- Slide 11 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_11.png" alt="Slide 11" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_11.png+Missing'">
+        </article>
+        <!-- Slide 12 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_12.png" alt="Slide 12" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_12.png+Missing'">
+        </article>
+        <!-- Slide 13 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_13.png" alt="Slide 13" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_13.png+Missing'">
+        </article>
+        <!-- Slide 14 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_14.png" alt="Slide 14" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_14.png+Missing'">
+        </article>
+        <!-- Slide 15 -->
+        <article class="slide w-full h-full p-4 md:p-8 hidden items-center justify-center">
+            <img src="Slide_Page_15.png" alt="Slide 15" class="max-h-full max-w-full object-contain shadow-2xl rounded" onerror="this.src='https://placehold.co/1920x1080/1e293b/94a3b8?text=Slide_Page_15.png+Missing'">
+        </article>
+    </main>
+
+    <!-- Consolidated Bottom Bar: Redesigned for absolute wrapping with no truncation -->
+    <div id="bottom-bar" class="flex-shrink-0 bg-slate-900 border-t border-yellow-600 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-20 relative">
+        
+        <!-- Progress Bar -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-slate-800">
+            <div id="progress-bar" class="h-full bg-yellow-500 transition-all duration-300 ease-out" style="width: 0%;"></div>
+        </div>
+        
+        <!-- Container allowing flexible height -->
+        <div class="flex items-center justify-between px-4 py-4 min-h-[5rem] h-auto gap-4">
+            
+            <!-- Left Section: Title -->
+            <div class="hidden lg:block w-1/4 font-semibold text-slate-300 text-sm md:text-base">
+                Lecture 3: State and Empire
+            </div>
+
+            <!-- Center Section: Cue Question (Fully Wrappable) -->
+            <div id="eq-container" class="flex-1 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-3 opacity-0 invisible">
+                <span class="bg-yellow-600 text-yellow-50 text-xs font-bold px-2 py-1 rounded uppercase tracking-wider flex-shrink-0 mt-0.5 sm:mt-0">
+                    Cue Question
+                </span>
+                <p id="eq-text" class="text-sm md:text-base text-yellow-100 italic text-left leading-relaxed break-words whitespace-normal max-w-3xl">
+                    <!-- Dynamic text will be injected here and forced to wrap entirely -->
+                </p>
+            </div>
+
+            <!-- Right Section: Controls -->
+            <div class="flex items-center justify-end gap-3 w-auto lg:w-1/4 flex-shrink-0">
+                <div id="slide-counter" class="text-slate-400 font-mono text-sm tracking-widest min-w-[60px] text-right">
+                    01 / 15
+                </div>
+                
+                <div class="flex items-center gap-1">
+                    <button onclick="prevSlide()" class="p-2 bg-slate-800 border border-slate-600 rounded hover:bg-slate-700 text-white transition-colors" aria-label="Previous Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button onclick="nextSlide()" class="p-2 bg-slate-800 border border-slate-600 rounded hover:bg-slate-700 text-white transition-colors" aria-label="Next Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="w-px h-6 bg-slate-700 mx-1"></div>
+                
+                <button id="fullscreen-btn" onclick="toggleFullScreen()" class="p-2 bg-slate-800 border border-slate-600 rounded hover:bg-slate-700 text-yellow-400 transition-colors" aria-label="Toggle Fullscreen">
+                    <svg id="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        // Map 1-indexed slide numbers to their respective Cue Questions from the Guided Notes
+        const cueQuestions = {
+            4: "How did the constructive and destructive faces of empires balance to shape the course of human history?",
+            5: "How did the Persian Empire utilize infrastructure and tolerance to maintain control over its vast and diverse population?",
+            6: "In what ways did the geography of Greece foster both a unique concept of citizenship and deep political fragmentation?",
+            7: "How did the outcome of the Greco-Persian Wars simultaneously launch the Athenian Golden Age and plant the seeds for Greece's eventual decline?",
+            8: "How did Alexander's conquests facilitate the spread and syncretism of Greek culture across the Near East and Asia?",
+            9: "What internal tensions and external conquests drove Rome's transformation from a republic into an empire?",
+            10: "How did the Han dynasty adapt the centralized structure of the Qin dynasty while shifting its governing philosophy to ensure long-term stability?",
+            11: "Despite their structural similarities, how did Rome and Han China differ fundamentally in their methods of cultural integration and political legitimacy?",
+            12: "What common internal weaknesses and external pressures contributed to the collapse of both the Roman and Han Chinese empires?",
+            13: "How did India maintain a strong civilizational identity and cultural continuity despite lacking long-term, centralized imperial unity?",
+            14: "How do modern nations and leaders continue to draw upon the symbols and governance models of ancient empires to legitimize their own power?",
+            15: "What enduring political and cultural structures, forged by ancient empires, continue to shape our modern world?"
+        };
+
+        function updateUI() {
+            // Update Slide Visibility
+            slides.forEach((slide, index) => {
+                if (index === currentSlideIndex) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('flex');
+                } else {
+                    slide.classList.remove('flex');
+                    slide.classList.add('hidden');
+                }
+            });
+
+            // Update Counter (formatting with leading zeros)
+            const displayNum = String(currentSlideIndex + 1).padStart(2, '0');
+            const displayTotal = String(totalSlides).padStart(2, '0');
+            document.getElementById('slide-counter').textContent = `${displayNum} / ${displayTotal}`;
+
+            // Update Progress Bar
+            const progressPercentage = ((currentSlideIndex) / (totalSlides - 1)) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercentage}%`;
+
+            // Update Cue Question
+            const currentSlideNumber = currentSlideIndex + 1;
+            const eqContainer = document.getElementById('eq-container');
+            const eqText = document.getElementById('eq-text');
+            
+            if (cueQuestions[currentSlideNumber]) {
+                eqText.textContent = cueQuestions[currentSlideNumber];
+                eqContainer.classList.remove('opacity-0', 'invisible');
+            } else {
+                eqContainer.classList.add('opacity-0', 'invisible');
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlideIndex < totalSlides - 1) {
+                currentSlideIndex++;
+                updateUI();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateUI();
+            }
+        }
+
+        function toggleFullScreen() {
+            const app = document.getElementById('presentation-app');
+            if (!document.fullscreenElement) {
+                if (app.requestFullscreen) {
+                    app.requestFullscreen();
+                } else if (app.webkitRequestFullscreen) { /* Safari */
+                    app.webkitRequestFullscreen();
+                } else if (app.msRequestFullscreen) { /* IE11 */
+                    app.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Fullscreen Change Listener (update icon)
+        document.addEventListener('fullscreenchange', () => {
+            const icon = document.getElementById('fullscreen-icon');
+            if (document.fullscreenElement) {
+                // Change to exit fullscreen icon
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />'; // Simple minimize/X icon
+            } else {
+                // Change back to expand icon
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />';
+            }
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === ' ') {
+                e.preventDefault(); // Prevent default page down scrolling
+                nextSlide();
+            }
+        });
+
+        // Initialize UI on load
+        window.addEventListener('DOMContentLoaded', updateUI);
+    </script>
+</body>
+</html>
