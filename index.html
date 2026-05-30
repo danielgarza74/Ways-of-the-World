@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ways of the World | A Global History</title>
+  <meta name="description" content="World History - Supplemental Materials and Directory" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Backgrounds & Text */
+      --bg-dark: #141B2D; /* Federal Navy */
+      --bg-dark-accent: #0B0E18;
+      --bg-light: #FDFBF7; /* Bright parchment white */
+      --bg-panel: #FFFFFF;
+      --bg-tint: #F8F5EE; /* Alternating bands */
+      
+      --text-light: #F2EAD3; /* Aged Parchment */
+      --text-dark: #1A2235; /* Deep Navy for text */
+      --text-muted: #4E648A; /* Union State Blue */
+      
+      /* Accents */
+      --accent-gold: #C5B358; /* Republic Gold */
+      --accent-copper: #A65A3A; /* Liberty Copper */
+      --accent-faint: rgba(166, 90, 58, 0.15);
+      
+      /* Badge / Category Colors */
+      --color-chapter: #6B4C7A; /* Parliament Plum */
+      --color-lecture: #9E1B32; /* Revolutionary Red */
+      --color-review: #2E4A7D; /* Bluecoat Blue */
+      --color-quiz: #6C757D; /* Field Gray */
+      --color-century: #70775F; /* Utility Green */
+      --color-chronicle: #A65A3A; /* Liberty Copper */
+      
+      /* Distinct Unit Backgrounds */
+      --bg-unit-1: transparent; 
+      --bg-unit-2: #F4F6F8; /* Cool Slate */
+      --bg-unit-3: #FCF7F2; /* Light Terracotta */
+      --bg-unit-4: #F4F7F4; /* Light Sage */
+      --bg-unit-5: #F8F7F2; /* Soft Wheat */
+      --bg-unit-6: #F6F5F9; /* Faint Lavender */
+      --bg-unit-7: #FBF5F7; /* Soft Blush */
+
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Cormorant Garamond', serif;
+      --max-width: 1300px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      background-image: radial-gradient(circle at top center, rgba(197, 179, 88, 0.03) 0%, transparent 60%);
+      min-height: 100vh;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(100% - 2.5rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* --- Hero Banner Section --- */
+    .hero {
+      background: linear-gradient(rgba(20, 27, 45, 0.85), rgba(20, 27, 45, 0.95)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--text-light);
+      padding: 6rem 0;
+      border-bottom: 4px solid var(--color-lecture);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .container {
+      max-width: 1500px; 
+      width: min(100% - 1.25rem, 1500px);
+    }
+
+    .hero-inner {
+      display: block;
+    }
+
+    .hero-logo {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 432px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.8));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-logo-left { left: 0; }
+    .hero-logo-right { right: 0; }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 1rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.05em;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.6rem;
+      font-style: italic;
+      color: var(--text-light);
+      opacity: 0.9;
+    }
+
+    /* --- Unit Bands --- */
+    .unit-band {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--accent-faint);
+    }
+    
+    .unit-band:nth-of-type(1) { background-color: var(--bg-unit-1); }
+    .unit-band:nth-of-type(2) { background-color: var(--bg-unit-2); }
+    .unit-band:nth-of-type(3) { background-color: var(--bg-unit-3); }
+    .unit-band:nth-of-type(4) { background-color: var(--bg-unit-4); }
+    .unit-band:nth-of-type(5) { background-color: var(--bg-unit-5); }
+    .unit-band:nth-of-type(6) { background-color: var(--bg-unit-6); }
+
+    .unit-header { text-align: center; margin-bottom: 4rem; }
+    .unit-label {
+      font-family: var(--font-heading); font-size: 1.2rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent-copper); margin-bottom: 0.5rem; font-weight: 700;
+    }
+    .unit-title {
+      font-family: var(--font-heading); font-size: 2.8rem; color: var(--bg-dark); margin: 0 0 1rem; font-weight: 600;
+    }
+    .unit-desc {
+      font-size: 1.35rem; font-style: italic; color: var(--text-muted);
+      max-width: 900px; margin: 0 auto; line-height: 1.6;
+    }
+
+    /* --- Grid & Cards --- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; }
+
+    .card {
+      background: var(--bg-panel); border: 1px solid var(--accent-faint);
+      padding: 2.5rem; position: relative; box-shadow: 0 4px 20px rgba(20, 27, 45, 0.02);
+      transition: all 0.4s ease;
+    }
+    .card:hover {
+      box-shadow: 0 10px 30px rgba(20, 27, 45, 0.06); border-color: rgba(166, 90, 58, 0.4); transform: translateY(-3px);
+    }
+
+    .card-header { text-align: center; border-bottom: 1px solid var(--accent-faint); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+    .card h3 { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 600; margin: 0; color: var(--bg-dark); }
+
+    /* --- Sections inside Cards --- */
+    .section-container { margin-bottom: 2.5rem; }
+    .section-container:last-child { margin-bottom: 0; }
+    
+    .section-heading {
+      font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 1rem 0;
+      display: flex; align-items: center; font-weight: 700;
+    }
+    .section-heading::after { content: ''; flex: 1; height: 1px; background-color: var(--accent-faint); margin-left: 15px; }
+
+    /* --- Links / Assignments --- */
+    .assignment-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.85rem 1.2rem; margin-bottom: 0.6rem; background: var(--bg-panel);
+      border: 1px solid var(--accent-faint); border-left: 4px solid transparent;
+      transition: all 0.3s ease; position: relative;
+    }
+    .assignment-link:hover { background: var(--bg-light); transform: translateX(6px); }
+
+    .link-text { font-family: var(--font-body); font-size: 1.2rem; color: var(--text-dark); font-weight: 600; transition: color 0.3s ease; }
+    .link-tag {
+      font-family: var(--font-heading); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em;
+      padding: 0.3rem 0.6rem; border: 1px solid; white-space: nowrap; margin-left: 1rem; font-weight: 600;
+    }
+
+    /* Tag Styling Logic */
+    .link-chapter .link-tag { color: var(--color-chapter); border-color: rgba(107, 76, 122, 0.3); background: rgba(107, 76, 122, 0.05); }
+    .link-chapter:hover { border-left-color: var(--color-chapter); border-color: rgba(107, 76, 122, 0.3); }
+    .link-chapter:hover .link-text { color: var(--color-chapter); }
+
+    .link-lecture .link-tag { color: var(--color-lecture); border-color: rgba(158, 27, 50, 0.3); background: rgba(158, 27, 50, 0.05); }
+    .link-lecture:hover { border-left-color: var(--color-lecture); border-color: rgba(158, 27, 50, 0.3); }
+    .link-lecture:hover .link-text { color: var(--color-lecture); }
+
+    .link-review .link-tag { color: var(--color-review); border-color: rgba(46, 74, 125, 0.3); background: rgba(46, 74, 125, 0.05); }
+    .link-review:hover { border-left-color: var(--color-review); border-color: rgba(46, 74, 125, 0.3); }
+    .link-review:hover .link-text { color: var(--color-review); }
+
+    .link-quiz .link-tag { color: var(--color-quiz); border-color: rgba(108, 117, 125, 0.3); background: rgba(108, 117, 125, 0.05); }
+    .link-quiz:hover { border-left-color: var(--color-quiz); border-color: rgba(108, 117, 125, 0.3); }
+    .link-quiz:hover .link-text { color: var(--color-quiz); }
+
+    .link-century .link-tag { color: var(--color-century); border-color: rgba(112, 119, 95, 0.3); background: rgba(112, 119, 95, 0.05); }
+    .link-century:hover { border-left-color: var(--color-century); border-color: rgba(112, 119, 95, 0.3); }
+    .link-century:hover .link-text { color: var(--color-century); }
+
+    .link-chronicle .link-tag { color: var(--color-chronicle); border-color: rgba(166, 90, 58, 0.3); background: rgba(166, 90, 58, 0.05); }
+    .link-chronicle:hover { border-left-color: var(--color-chronicle); border-color: rgba(166, 90, 58, 0.3); }
+    .link-chronicle:hover .link-text { color: var(--color-chronicle); }
+
+    /* --- Footer --- */
+    footer {
+      padding: 4rem 0; background-color: var(--bg-dark); color: var(--text-muted);
+      font-family: var(--font-heading); font-size: 0.9rem; letter-spacing: 0.1em;
+      text-align: center; border-top: 3px solid var(--accent-gold);
+    }
+    footer span { display: block; margin-top: 0.5rem; font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+      .assignment-link { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .link-tag { margin-left: 0; }
+      .grid { grid-template-columns: 1fr; }
+      
+      .hero-inner {
+        text-align: center;
+      }
+      .hero-logo {
+        position: relative;
+        top: auto;
+        transform: none;
+        margin: 0 10px 1.5rem;
+        max-width: 200px;
+        display: inline-block;
+      }
+      .hero-logo-left { left: auto; }
+      .hero-logo-right { right: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <img src="general_logo.png" alt="School Logo" class="hero-logo hero-logo-left" onerror="this.src='https://placehold.co/432x432/transparent/C5B358?text=School+Logo'" />
+      <img src="logo.png" alt="History Logo" class="hero-logo hero-logo-right" onerror="this.src='https://placehold.co/432x432/transparent/C5B358?text=History+Logo'" />
+      
+      <div class="hero-text">
+        <div class="eyebrow">Supplemental Materials</div>
+        <h1>Ways of the World</h1>
+        <p>A Global History Curriculum Archive</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="directory">
+
+    <!-- ================= PART 1 ================= -->
+    <section class="unit-band">
+      <div class="container">
+        <div class="unit-header">
+          <div class="unit-label">Part One</div>
+          <h2 class="unit-title">First Things First</h2>
+          <p class="unit-desc">Beginnings in History, to 500 B.C.E.</p>
+        </div>
+
+        <div class="grid">
+          <!-- Chapter 1 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 1 | First Peoples, First Farmers</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">Most of History in a Single Chapter, to 4000 В.С.Е.</h4>
+                <a href="Unit-1/Chapter-1/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-1/Chapter-1/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-1/Chapter-1/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-1/Chapter-1/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 2 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 2 | First Civilizations</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">Cities, States, and Unequal Societies, 3500 B.C.E.-500 В.С.Е.</h4>
+                <a href="Unit-1/Chapter-2/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-1/Chapter-2/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-1/Chapter-2/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-1/Chapter-2/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+              <div class="section-container">
+                <h4 class="section-heading">Doing History</h4>
+                <a href="Unit-1/Chapter-2/Chronicles/Indus-Valley/index.html" class="assignment-link link-chronicle"><span class="link-text">Indus Valley Civilization</span><span class="link-tag">Chronicle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PART 2 ================= -->
+    <section class="unit-band">
+      <div class="container">
+        <div class="unit-header">
+          <div class="unit-label">Part Two</div>
+          <h2 class="unit-title">Second-Wave Civilizations in World History</h2>
+          <p class="unit-desc">500 В.С.Е.-500 C.E.</p>
+        </div>
+
+        <div class="grid">
+          <!-- Chapter 3 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 3 | State and Empire in Eurasia/North Africa</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500 B.C.E.-500 C.E.</h4>
+                <a href="Unit-2/Chapter-3/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-2/Chapter-3/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-2/Chapter-3/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-2/Chapter-3/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 4 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 4 | Culture and Religion in Eurasia/North Africa</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500 В.С.Е.-500 С.Е.</h4>
+                <a href="Unit-2/Chapter-4/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-2/Chapter-4/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-2/Chapter-4/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-2/Chapter-4/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 5 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 5 | Society and Inequality in Eurasia/North Africa</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500 В.С.Е.-500 С.Е.</h4>
+                <a href="Unit-2/Chapter-5/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-2/Chapter-5/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-2/Chapter-5/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-2/Chapter-5/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 6 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 6 | Commonalities and Variations</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500 Β.C.E.-1200 С.Е.</h4>
+                <a href="Unit-2/Chapter-6/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-2/Chapter-6/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-2/Chapter-6/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-2/Chapter-6/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+              <div class="section-container">
+                <h4 class="section-heading">Doing History</h4>
+                <a href="Unit-2/Chapter-6/Chronicles/Axum/index.html" class="assignment-link link-chronicle"><span class="link-text">Axum and the World</span><span class="link-tag">Chronicle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PART 3 ================= -->
+    <section class="unit-band">
+      <div class="container">
+        <div class="unit-header">
+          <div class="unit-label">Part Three</div>
+          <h2 class="unit-title">An Age of Accelerating Connections</h2>
+          <p class="unit-desc">500-1500</p>
+        </div>
+
+        <div class="grid">
+          <!-- Chapter 7 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 7 | Commerce and Culture</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500-1500</h4>
+                <a href="Unit-3/Chapter-7/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-3/Chapter-7/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-3/Chapter-7/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-3/Chapter-7/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 8 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 8 | China and the World: East Asian Connections</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500-1300</h4>
+                <a href="Unit-3/Chapter-8/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-3/Chapter-8/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-3/Chapter-8/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-3/Chapter-8/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 9 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 9 | The Worlds of Islam: Afro-Eurasian Connections</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">600-1500</h4>
+                <a href="Unit-3/Chapter-9/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-3/Chapter-9/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-3/Chapter-9/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-3/Chapter-9/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 10 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 10 | The Worlds of Christendom: Contraction, Expansion, and Division</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">500-1300</h4>
+                <a href="Unit-3/Chapter-10/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-3/Chapter-10/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-3/Chapter-10/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-3/Chapter-10/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 11 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 11 | Pastoral Peoples on the Global Stage: The Mongol Moment</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1200-1500</h4>
+                <a href="Unit-3/Chapter-11/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-3/Chapter-11/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-3/Chapter-11/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-3/Chapter-11/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 12 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 12 | The Worlds of the Fifteenth Century</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">15th Century</h4>
+                <a href="Unit-3/Chapter-12/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-3/Chapter-12/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-3/Chapter-12/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-3/Chapter-12/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+              <div class="section-container">
+                <h4 class="section-heading">Doing History</h4>
+                <a href="Unit-3/Chapter-12/Chronicles/Islam-Renaissance/index.html" class="assignment-link link-chronicle"><span class="link-text">Islam and Renaissance Europe</span><span class="link-tag">Chronicle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PART 4 ================= -->
+    <section class="unit-band">
+      <div class="container">
+        <div class="unit-header">
+          <div class="unit-label">Part Four</div>
+          <h2 class="unit-title">The Early Modern World</h2>
+          <p class="unit-desc">1450-1750</p>
+        </div>
+
+        <div class="grid">
+          <!-- Chapter 13 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 13 | Political Transformations: Empires and Encounters</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1450-1750</h4>
+                <a href="Unit-4/Chapter-13/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-4/Chapter-13/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-4/Chapter-13/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-4/Chapter-13/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 14 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 14 | Economic Transformations: Commerce and Consequence</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1450-1750</h4>
+                <a href="Unit-4/Chapter-14/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-4/Chapter-14/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-4/Chapter-14/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-4/Chapter-14/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 15 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 15 | Cultural Transformations: Religion and Science</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1450-1750</h4>
+                <a href="Unit-4/Chapter-15/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-4/Chapter-15/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-4/Chapter-15/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-4/Chapter-15/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+              <div class="section-container">
+                <h4 class="section-heading">Doing History</h4>
+                <a href="Unit-4/Chapter-15/Chronicles/Global-Christianity/index.html" class="assignment-link link-chronicle"><span class="link-text">Global Christianity in the Early Modern Era</span><span class="link-tag">Chronicle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PART 5 ================= -->
+    <section class="unit-band">
+      <div class="container">
+        <div class="unit-header">
+          <div class="unit-label">Part Five</div>
+          <h2 class="unit-title">The European Moment in World History</h2>
+          <p class="unit-desc">1750-1914</p>
+        </div>
+
+        <div class="grid">
+          <!-- Chapter 16 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 16 | Atlantic Revolutions, Global Echoes</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1750-1914</h4>
+                <a href="Unit-5/Chapter-16/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-5/Chapter-16/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-5/Chapter-16/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-5/Chapter-16/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 17 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 17 | Revolutions of Industrialization</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1750-1914</h4>
+                <a href="Unit-5/Chapter-17/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-5/Chapter-17/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-5/Chapter-17/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-5/Chapter-17/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 18 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 18 | Colonial Encounters in Asia, Africa, and Oceania</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1750-1950</h4>
+                <a href="Unit-5/Chapter-18/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-5/Chapter-18/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-5/Chapter-18/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-5/Chapter-18/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 19 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 19 | Empires in Collision: Europe, the Middle East, and East Asia</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1800-1914</h4>
+                <a href="Unit-5/Chapter-19/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-5/Chapter-19/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-5/Chapter-19/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-5/Chapter-19/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+              <div class="section-container">
+                <h4 class="section-heading">Doing History</h4>
+                <a href="Unit-5/Chapter-19/Chronicles/Changing-China/index.html" class="assignment-link link-chronicle"><span class="link-text">Changing China</span><span class="link-tag">Chronicle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PART 6 ================= -->
+    <section class="unit-band">
+      <div class="container">
+        <div class="unit-header">
+          <div class="unit-label">Part Six</div>
+          <h2 class="unit-title">The Most Recent Century</h2>
+          <p class="unit-desc">1914-2015</p>
+        </div>
+
+        <div class="grid">
+          <!-- Chapter 20 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 20 | Collapse at the Center: World War, Depression, and the Rebalancing of Global Power</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1914-1970s</h4>
+                <a href="Unit-6/Chapter-20/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-6/Chapter-20/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-6/Chapter-20/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-6/Chapter-20/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 21 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 21 | Revolution, Socialism, and Global Conflict: The Rise and Fall of World Communism</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1917-present</h4>
+                <a href="Unit-6/Chapter-21/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-6/Chapter-21/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-6/Chapter-21/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-6/Chapter-21/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 22 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 22 | The End of Empire: The Global South on the Global Stage</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">1914-present</h4>
+                <a href="Unit-6/Chapter-22/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-6/Chapter-22/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-6/Chapter-22/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-6/Chapter-22/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter 23 -->
+          <div class="card">
+            <div class="card-header"><h3>Chapter 23 | Capitalism and Culture: The Acceleration of Globalization</h3></div>
+            <div class="card-body">
+              <div class="section-container">
+                <h4 class="section-heading">since 1945</h4>
+                <a href="Unit-6/Chapter-23/Slide-Deck/index.html" class="assignment-link link-chapter"><span class="link-text">Lecture Notes</span><span class="link-tag">Module</span></a>
+                <a href="Unit-6/Chapter-23/Lecture-App/index.html" class="assignment-link link-lecture"><span class="link-text">Lecture Application</span><span class="link-tag">Lecture</span></a>
+                <a href="Unit-6/Chapter-23/Quiz-Review/index.html" class="assignment-link link-review"><span class="link-text">Quiz Review</span><span class="link-tag">Review</span></a>
+                <a href="Unit-6/Chapter-23/Section-Quiz/index.html" class="assignment-link link-quiz"><span class="link-text">Section Quiz</span><span class="link-tag">Assessment</span></a>
+              </div>
+              <div class="section-container">
+                <h4 class="section-heading">Doing History</h4>
+                <a href="Unit-6/Chapter-23/Chronicles/Faces-of-Globalization/index.html" class="assignment-link link-chronicle"><span class="link-text">Faces of Globalization</span><span class="link-tag">Chronicle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Ways of the World Textbook Project. All rights reserved.<br>
+      <span>The Garza Archives | Educational materials by Daniel Garza</span>
+    </div>
+  </footer>
+
+</body>
+</html>
